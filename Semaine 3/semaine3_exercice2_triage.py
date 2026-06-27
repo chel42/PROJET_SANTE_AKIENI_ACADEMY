@@ -12,7 +12,7 @@ print('=' * 55)
 print()
 
 # --- SAISIE DES DONNEES PATIENT ---
-# S2 : input() avec conversion de types
+# input() avec conversion de types
 nom_patient  = input('Nom du patient                           : ')
 age_patient  = int(input('Age (annees)                             : '))
 temperature  = float(input('Temperature (degres C, ex: 38.4)         : '))
@@ -23,7 +23,7 @@ douleur      = int(input('Douleur /10 (0=aucune, 10=insupportable) : '))
 # --- VALIDATION DES PLAGES (S2 + S3 : conditions simples) ---
 # Verifier que la temperature est dans une plage physiologiquement possible
 
-erreur_saisie = False   # On utilise cette variable pour savoir si une erreur à ete detectée
+erreur_saisie = False   # pour savoir si une erreur à ete detectée
 
 if temperature < 35.0 or temperature > 43.0:
     print('ERREUR : Valeur de temperature impossible — verifier la saisie')
@@ -70,7 +70,7 @@ if erreur_saisie == False:
         delai_pec      = '< 30 minutes'
         action_triage  = 'Infirmier — surveillance'
 
-    # Niveau 4 : MOINS URGENT — tous les parametres sont normaux
+    # Niveau 4 : MOINS URGENT 
     else:
         niveau_triage = '4 — MOINS URGENT'
         couleur_triage = '[VERT]'
@@ -78,8 +78,7 @@ if erreur_saisie == False:
         action_triage  = 'File d attente standard'
 
     # --- DETERMINATION DU MOTIF PRINCIPAL ---
-    # On cherche quelle condition a declenche le niveau de triage
-
+   
     if temperature > 39.5:
         motif_principal = f'Temperature {temperature} C > seuil 39.5 C'
     elif spo2 < 90:

@@ -1,0 +1,160 @@
+# 🏥 Projet Fil Rouge N°1 — Santé Publique
+**Akieni Academy — Programme Data Science 2026**  
+**Commanditaire fictif :** Ministère de la Santé de la République du Congo  
+**Coordonnateur pédagogique :** Abdias MONTSONGO
+
+---
+
+## 📋 Description du Projet
+
+Ce projet fil rouge simule le développement d'un système informatique de gestion sanitaire
+pour le Ministère de la Santé de la République du Congo.
+Chaque semaine, de nouvelles fonctionnalités sont ajoutées au module fondateur `sante_variables.py`,
+qui évolue progressivement vers un produit data professionnel complet.
+
+---
+
+## 📁 Structure du Projet
+
+```
+Akieni Academy--Exercice/
+│
+├── Semaine 2/              
+│   ├── semaine2_exercice1_sante.py     # Fiche patient CHU Brazzaville
+│   ├── semaine2_exercice2_sante.py     # KPIs sanitaires OMS — Hôpital Pointe-Noire
+│   └── semaine2_challenge.py           # Rapport comparatif 3 hôpitaux du Pool
+│
+├── Semaine 3/
+│   ├── semaine3_exercice1_stocks.py    # Classification stocks médicaments PNA
+│   ├── semaine3_exercice2_triage.py    # Triage patient urgences CHU Brazzaville
+│   ├── semaine3_challenge.py           # Tableau de bord 5 hôpitaux — Conseil des Ministres
+│   └── semaine3_mini_projet.py         # Module sante_variables.py enrichi S3
+│
+├── .gitignore 
+├── sante_variables.py # Module fondateur — constantes, variables, KPIs
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## 🗓️ Semaine 2 — Variables, Types, Opérateurs, f-strings
+
+### Notions couvertes
+- Déclaration de variables avec les bons types (`int`, `float`, `str`)
+- Opérateurs arithmétiques (`+`, `-`, `*`, `/`, `//`, `%`, `**`)
+- f-strings pour l'affichage structuré
+- `input()` et conversion de types
+
+### Fichiers produits
+
+#### `sante_variables.py` — Module Fondateur
+Fichier central du projet. Contient :
+- **Section A** : Constantes nationales et normes OMS (taux de change, seuils OMS, 12 départements du Congo)
+- **Section B** : Variables des 5 hôpitaux (CHU Brazzaville, Pointe-Noire, Dolisie, Owando, Impfondo)
+- **Section C** : Variables des 5 médicaments essentiels (Artemether, Amoxicilline, Paracetamol, SRO, Vaccin)
+- **Section D** : Calculs d'initialisation (densité médicale, taux d'occupation moyen, valeur totale du stock)
+- **Section E** : Rapport d'inventaire initial
+
+#### `semaine2_exercice1_sante.py` — Fiche Patient CHU Brazzaville
+- Contexte : Mme MAVOUNGOU Celestine, 42 ans, urgences CHU Brazzaville
+- Calcul du coût total après remise CNSS 30% → **10 500 FCFA**
+- Taux d'occupation de l'hôpital → **88.8%**
+- Ratio consultations/médecin → **2.6**
+
+#### `semaine2_exercice2_sante.py` — KPIs Sanitaires OMS
+- Conversion budget Q4 en EUR et USD
+- 3 indicateurs OMS : densité médicale (0.2), taux mortalité (1.4%), taux occupation (79.4%)
+- Division entière pour jours de stock médicaments → **68 jours**
+- Projection budget N+2 à 8%/an → **102 001 680 FCFA**
+
+#### `semaine2_challenge.py` — Rapport 3 Hôpitaux du Pool
+- Comparaison Kinkala, Vindza, Kindamba
+- Calcul KPIs : coût moyen/patient, taux occupation, densité médicale, taux mortalité
+- Les 3 hôpitaux identifiés en situation critique
+- Bonus : analyse budget recrutement 5 médecins/hôpital
+
+---
+
+## 🗓️ Semaine 3 — Conditions & Branchements (if / elif / else)
+
+### Notions couvertes
+- Structures `if / elif / else` correctement indentées
+- Conditions composées avec `and`, `or`, `not`
+- Opérateur ternaire
+- Valeurs truthy / falsy
+- Import de modules Python (`import`, `from ... import`, `sys.path`)
+- Bloc `if __name__ == '__main__'`
+
+### Fichiers produits
+
+#### `semaine3_exercice1_stocks.py` — Classification Stocks PNA
+Implémentation des 4 règles de classification de la Pharmacie Nationale d'Approvisionnement :
+| Statut | Condition | Couleur |
+|---|---|---|
+| RUPTURE CRITIQUE | stock <= seuil | 🔴 ROUGE |
+| ALERTE STOCK | stock <= seuil × 1.5 | 🟠 ORANGE |
+| STOCK LIMITÉ | stock <= seuil × 2.0 | 🟡 JAUNE |
+| STOCK NORMAL | stock > seuil × 2.0 | 🟢 VERT |
+
+Résultats : **2 ruptures critiques** (SRO, Vaccin), **1 alerte** (Amoxicilline), **1 normal** (Paracetamol)
+
+#### `semaine3_exercice2_triage.py` — Triage Patient Urgences
+Protocole Manchester adapté — saisie interactive via `input()` :
+| Niveau | Couleur | Déclencheur | Délai |
+|---|---|---|---|
+| 1 — IMMÉDIAT | 🔴 ROUGE | temp > 39.5 OU SpO2 < 90 OU tension > 180 | 0 min |
+| 2 — URGENT | 🟠 ORANGE | temp > 38.5 OU SpO2 < 94 OU tension > 140 | < 10 min |
+| 3 — URGENT DIFFÉRÉ | 🟡 JAUNE | temp > 37.5 OU douleur > 6 | < 30 min |
+| 4 — MOINS URGENT | 🟢 VERT | tous paramètres normaux | < 120 min |
+
+#### `semaine3_challenge.py` — Tableau de Bord 5 Hôpitaux
+Rapport pour le Conseil des Ministres — Dr. ELENGA Pascal, DSS :
+- **4 hôpitaux sur 5** en situation CRITIQUE
+- **8 ruptures de stock** identifiées à l'échelle nationale
+- Coût commandes urgentes estimé : **3 600 000 FCFA**
+
+#### `semaine3_mini_projet.py` — Module sante_variables.py enrichi S3
+Nouvelles sections ajoutées au module fondateur :
+- **Section F** : Classification automatique statut stocks (5 médicaments)
+- **Section G** : Classification niveau d'occupation (5 hôpitaux)
+- **Section H** : Classification couverture vaccinale (4 départements)
+- **Section I** : Rapport d'état global avec compteurs d'alertes et résumé exécutif
+
+---
+
+## 🛠️ Technologies utilisées
+- **Langage** : Python 3.12
+- **Éditeur** : VS Code
+- **Versioning** : Git / GitHub
+
+## 🚀 Comment exécuter
+
+```bash
+# Cloner le repo
+git clone https://github.com/chel42/PROJET_SANTE_AKIENI_ACADEMY.git
+
+# Aller dans le bon dossier
+cd "Akieni Academy--Exercice/Semaine 2"
+
+# Lancer un script
+python sante_variables.py
+python semaine2_exercice1_sante.py
+```
+
+---
+
+## 📈 Progression cumulative
+
+| Semaine | Notions | Statut |
+|---|---|---|
+| S2 | Variables, types, opérateurs, f-strings, input() | ✅ Terminé |
+| S3 | if / elif / else, and / or / not, import | ✅ Terminé |
+| S4 | Boucles for / while, range(), listes | 🔜 À venir |
+| S5 | Fonctions, def, return, try/except | 🔜 À venir |
+| S6 | Listes, dictionnaires, CSV | 🔜 À venir |
+| S7 | Classes, Git avancé | 🔜 À venir |
+
+---
+
+*Projet pédagogique — Akieni Academy, Brazzaville, République du Congo — 2026*

@@ -1,11 +1,11 @@
-# 🏥 Projet Fil Rouge N°1 — Santé Publique
+#  Projet Fil Rouge N°1 — Santé Publique
 **Akieni Academy — Programme Data Science 2026**  
 **Commanditaire fictif :** Ministère de la Santé de la République du Congo  
 **Coordonnateur pédagogique :** Abdias MONTSONGO
 
 ---
 
-## 📋 Description du Projet
+## Description du Projet
 
 Ce projet fil rouge simule le développement d'un système informatique de gestion sanitaire
 pour le Ministère de la Santé de la République du Congo.
@@ -14,12 +14,12 @@ qui évolue progressivement vers un produit data professionnel complet.
 
 ---
 
-## 📁 Structure du Projet
+##  Structure du Projet
 
 ```
 Akieni Academy--Exercice/
 │
-├── Semaine 2/              
+├── Semaine 2/
 │   ├── semaine2_exercice1_sante.py     # Fiche patient CHU Brazzaville
 │   ├── semaine2_exercice2_sante.py     # KPIs sanitaires OMS — Hôpital Pointe-Noire
 │   └── semaine2_challenge.py           # Rapport comparatif 3 hôpitaux du Pool
@@ -30,15 +30,18 @@ Akieni Academy--Exercice/
 │   ├── semaine3_challenge.py           # Tableau de bord 5 hôpitaux — Conseil des Ministres
 │   └── semaine3_mini_projet.py         # Module sante_variables.py enrichi S3
 │
-├── .gitignore 
-├── sante_variables.py # Module fondateur — constantes, variables, KPIs
+├── Semaine 4/
+│   └── semaine4_exercice1_mpox.py      # Surveillance épidémique Mpox — 9 districts
+│
+├── sante_variables.py                  # Module fondateur — constantes, variables, KPIs
+├── .gitignore
 ├── requirements.txt
 └── README.md
 ```
 
 ---
 
-## 🗓️ Semaine 2 — Variables, Types, Opérateurs, f-strings
+##  Semaine 2 — Variables, Types, Opérateurs, f-strings
 
 ### Notions couvertes
 - Déclaration de variables avec les bons types (`int`, `float`, `str`)
@@ -76,7 +79,7 @@ Fichier central du projet. Contient :
 
 ---
 
-## 🗓️ Semaine 3 — Conditions & Branchements (if / elif / else)
+##  Semaine 3 — Conditions & Branchements (if / elif / else)
 
 ### Notions couvertes
 - Structures `if / elif / else` correctement indentées
@@ -123,12 +126,47 @@ Nouvelles sections ajoutées au module fondateur :
 
 ---
 
-## 🛠️ Technologies utilisées
+##  Semaine 4 — Boucles for, range(), Accumulateurs
+
+### Notions couvertes
+- Boucle `for` avec `range()`
+- Accumulateurs (initialisation à 0 avant la boucle, addition à chaque tour)
+- Compteurs de catégories (zones VERT / JAUNE / ORANGE / ROUGE)
+- Combinaison boucle + `if/elif/else` (S3) + `input()` (S2)
+- Calcul de taux de létalité avec protection division par zéro
+
+### Fichiers produits
+
+#### `semaine4_exercice1_mpox.py` — Surveillance Épidémique Mpox
+- **Contexte réel** : données officielles OMS / Ministère de la Santé Congo, 06/02/2025
+- Analyse des 9 districts sanitaires répartis dans 5 départements
+- Saisie interactive via `input()` pour chaque district (nom, suspects, confirmés, décès)
+- Calcul automatique des cas actifs et du taux de létalité par district
+- Classification par niveau d'alerte selon les confirmés :
+
+| Confirmés | Niveau | Couleur |
+|---|---|---|
+| = 1 | VERT | 🟢 Surveillance standard |
+| 2 à 4 | JAUNE | 🟡 Renforcer la surveillance |
+| 5 à 9 | ORANGE | 🟠 Envoyer une équipe d'intervention |
+| ≥ 10 | ROUGE | 🔴 URGENCE — intervention immédiate |
+
+Résultats nationaux :
+- **Total confirmés** : 26 cas | **Total suspects** : 27
+- **Zones ROUGE** : 1 (Mossaka-Loukolela — 12 cas)
+- **Zones JAUNE** : 4 (Owando, Oyo-Alima, Impfondo, Gamboma)
+- **Zones VERT** : 4 (Enyellé-Bétou, Lumumba, Mvou-mvou, Poto-Poto)
+- **Zones ORANGE** : 0
+- **Total décès** : 0 | **Létalité** : 0.0%
+
+---
+
+##  Technologies utilisées
 - **Langage** : Python 3.12
 - **Éditeur** : VS Code
 - **Versioning** : Git / GitHub
 
-## 🚀 Comment exécuter
+##  Comment exécuter
 
 ```bash
 # Cloner le repo
@@ -144,16 +182,13 @@ python semaine2_exercice1_sante.py
 
 ---
 
-## 📈 Progression cumulative
+##  Progression cumulative
 
 | Semaine | Notions | Statut |
 |---|---|---|
 | S2 | Variables, types, opérateurs, f-strings, input() | ✅ Terminé |
 | S3 | if / elif / else, and / or / not, import | ✅ Terminé |
-| S4 | Boucles for / while, range(), listes | 🔜 À venir |
-| S5 | Fonctions, def, return, try/except | 🔜 À venir |
-| S6 | Listes, dictionnaires, CSV | 🔜 À venir |
-| S7 | Classes, Git avancé | 🔜 À venir |
+| S4 | Boucles for, range(), accumulateurs | ✅ Terminé |
 
 ---
 

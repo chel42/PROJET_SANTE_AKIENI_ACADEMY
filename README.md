@@ -5,7 +5,7 @@
 
 ---
 
-## Description du Projet
+##  Description du Projet
 
 Ce projet fil rouge simule le développement d'un système informatique de gestion sanitaire
 pour le Ministère de la Santé de la République du Congo.
@@ -33,11 +33,17 @@ Akieni Academy--Exercice/
 ├── Semaine 4/
 │   └── semaine4_exercice1_mpox.py      # Surveillance épidémique Mpox — 9 districts
 │
+├── Semaine 5/
+│   └── Projet_S5_Analyse_Ventes_Afrique.ipynb  # Analyse ventes boutique e-commerce Afrique
+│
 ├── sante_variables.py                  # Module fondateur — constantes, variables, KPIs
 ├── .gitignore
 ├── requirements.txt
 └── README.md
 ```
+
+> **CalcX** (calculatrice desktop Flet) — second livrable S5 — est hébergé dans un repo dédié :
+> [github.com/chel42/CalcX](https://github.com/chel42/CalcX)
 
 ---
 
@@ -156,14 +162,42 @@ Résultats nationaux :
 - **Zones ROUGE** : 1 (Mossaka-Loukolela — 12 cas)
 - **Zones JAUNE** : 4 (Owando, Oyo-Alima, Impfondo, Gamboma)
 - **Zones VERT** : 4 (Enyellé-Bétou, Lumumba, Mvou-mvou, Poto-Poto)
-- **Zones ORANGE** : 0
-- **Total décès** : 0 | **Létalité** : 0.0%
+- **Zones ORANGE** : 0 | **Total décès** : 0 | **Létalité** : 0.0%
+
+---
+
+##  Semaine 5 — Fonctions Python (def, return, try/except, docstrings)
+
+### Notions couvertes
+- Définition de fonctions avec `def` et `return`
+- Docstrings (documentation des fonctions)
+- Portée des variables (scope local / global)
+- Gestion des erreurs avec `try / except`
+- Architecture multi-fichiers et séparation des responsabilités
+- Jupyter Notebook comme environnement d'analyse
+
+### Fichiers produits
+
+#### `Projet_S5_Analyse_Ventes_Afrique.ipynb` — Analyse Ventes Boutique E-commerce
+- Données simulées d'une boutique en ligne sur 6 mois dans 5 villes d'Afrique (Dakar, Abidjan, Douala, Brazzaville, Lomé) — 180 ventes générées
+- **Niveau Débutant** : 4 fonctions avec boucles et conditions — chiffre d'affaires total, quantité par produit, produit le plus vendu, ventes par ville
+- **Niveau Intermédiaire** : 4 fonctions avec `try/except` — CA par mois, panier moyen par ville, filtrage par seuil, détection des anomalies (prix à 0, quantité `None`)
+- Visualisation automatique : graphique CA par mois + quantités vendues par produit
+- Produit le plus vendu : **Basket urbaine** | CA variable sur la période sans tendance régulière
+
+#### `CalcX` — Calculatrice Moderne & Adaptative (repo dédié)
+- Application desktop développée avec le framework **Flet** en Python
+- Interface responsive adaptée à toutes les tailles d'écran (PC, Tablette, Mobile)
+- Architecture modulaire : séparation logique de calcul / gestion d'état / interface graphique
+- Notions S5 appliquées : fonctions, modules, `import`, architecture multi-fichiers
+- **Repo dédié** : [github.com/chel42/CalcX](https://github.com/chel42/CalcX)
 
 ---
 
 ##  Technologies utilisées
 - **Langage** : Python 3.12
-- **Éditeur** : VS Code
+- **Environnements** : VS Code, Jupyter Notebook
+- **Frameworks** : Flet (CalcX)
 - **Versioning** : Git / GitHub
 
 ##  Comment exécuter
@@ -172,12 +206,13 @@ Résultats nationaux :
 # Cloner le repo
 git clone https://github.com/chel42/PROJET_SANTE_AKIENI_ACADEMY.git
 
-# Aller dans le bon dossier
+# Lancer un script Python
 cd "Akieni Academy--Exercice/Semaine 2"
-
-# Lancer un script
 python sante_variables.py
-python semaine2_exercice1_sante.py
+
+# Ouvrir le notebook S5
+cd "Semaine 5"
+jupyter notebook Projet_S5_Analyse_Ventes_Afrique.ipynb
 ```
 
 ---
@@ -189,7 +224,8 @@ python semaine2_exercice1_sante.py
 | S2 | Variables, types, opérateurs, f-strings, input() | ✅ Terminé |
 | S3 | if / elif / else, and / or / not, import | ✅ Terminé |
 | S4 | Boucles for, range(), accumulateurs | ✅ Terminé |
+| S5 | Fonctions, def, return, try/except, docstrings | ✅ Terminé |
 
 ---
 
-*Projet pédagogique — Akieni Academy, Brazzaville, République du Congo — 2026*
+*Projet pédagogique — Akieni Academy, Brazzaville — 2026*

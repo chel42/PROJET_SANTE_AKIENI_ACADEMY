@@ -1,11 +1,11 @@
-#  Projet Fil Rouge N°1 — Santé Publique
+# Projet Fil Rouge N°1 — Santé Publique
 **Akieni Academy — Programme Data Science 2026**  
 **Commanditaire fictif :** Ministère de la Santé de la République du Congo  
 **Coordonnateur pédagogique :** Abdias MONTSONGO
 
 ---
 
-##  Description du Projet
+## Description du Projet
 
 Ce projet fil rouge simule le développement d'un système informatique de gestion sanitaire
 pour le Ministère de la Santé de la République du Congo.
@@ -14,7 +14,7 @@ qui évolue progressivement vers un produit data professionnel complet.
 
 ---
 
-##  Structure du Projet
+## Structure du Projet
 
 ```
 Akieni Academy--Exercice/
@@ -36,6 +36,9 @@ Akieni Academy--Exercice/
 ├── Semaine 5/
 │   └── Projet_S5_Analyse_Ventes_Afrique.ipynb  # Analyse ventes boutique e-commerce Afrique
 │
+├── Semaine 6/
+│   └── Projet_S6_AgriSuds.ipynb        # Digitaliser les récoltes du réseau AgriSuds
+│
 ├── sante_variables.py                  # Module fondateur — constantes, variables, KPIs
 ├── .gitignore
 ├── requirements.txt
@@ -43,11 +46,11 @@ Akieni Academy--Exercice/
 ```
 
 > **CalcX** (calculatrice desktop Flet) — second livrable S5 — est hébergé dans un repo dédié :
-> [github.com/chel42/CalcX](https://github.com/chel42/CalcX)
+> 👉 [github.com/chel42/CalcX](https://github.com/chel42/CalcX)
 
 ---
 
-##  Semaine 2 — Variables, Types, Opérateurs, f-strings
+## Semaine 2 — Variables, Types, Opérateurs, f-strings
 
 ### Notions couvertes
 - Déclaration de variables avec les bons types (`int`, `float`, `str`)
@@ -85,7 +88,7 @@ Fichier central du projet. Contient :
 
 ---
 
-##  Semaine 3 — Conditions & Branchements (if / elif / else)
+## Semaine 3 — Conditions & Branchements (if / elif / else)
 
 ### Notions couvertes
 - Structures `if / elif / else` correctement indentées
@@ -132,7 +135,7 @@ Nouvelles sections ajoutées au module fondateur :
 
 ---
 
-##  Semaine 4 — Boucles for, range(), Accumulateurs
+## Semaine 4 — Boucles for, range(), Accumulateurs
 
 ### Notions couvertes
 - Boucle `for` avec `range()`
@@ -166,7 +169,7 @@ Résultats nationaux :
 
 ---
 
-##  Semaine 5 — Fonctions Python (def, return, try/except, docstrings)
+## Semaine 5 — Fonctions Python (def, return, try/except, docstrings)
 
 ### Notions couvertes
 - Définition de fonctions avec `def` et `return`
@@ -179,28 +182,61 @@ Résultats nationaux :
 ### Fichiers produits
 
 #### `Projet_S5_Analyse_Ventes_Afrique.ipynb` — Analyse Ventes Boutique E-commerce
-- Données simulées d'une boutique en ligne sur 6 mois dans 5 villes d'Afrique (Dakar, Abidjan, Douala, Brazzaville, Lomé) — 180 ventes générées
-- **Niveau Débutant** : 4 fonctions avec boucles et conditions — chiffre d'affaires total, quantité par produit, produit le plus vendu, ventes par ville
-- **Niveau Intermédiaire** : 4 fonctions avec `try/except` — CA par mois, panier moyen par ville, filtrage par seuil, détection des anomalies (prix à 0, quantité `None`)
+- Données simulées d'une boutique en ligne sur 6 mois dans 5 villes d'Afrique (Dakar, Abidjan, Douala, Brazzaville, Lomé)
+- **Niveau Débutant** : 4 fonctions — chiffre d'affaires total, quantité par produit, produit le plus vendu, ventes par ville
+- **Niveau Intermédiaire** : 4 fonctions avec `try/except` — CA par mois, panier moyen par ville, filtrage par seuil, détection des anomalies
 - Visualisation automatique : graphique CA par mois + quantités vendues par produit
-- Produit le plus vendu : **Basket urbaine** | CA variable sur la période sans tendance régulière
 
 #### `CalcX` — Calculatrice Moderne & Adaptative (repo dédié)
 - Application desktop développée avec le framework **Flet** en Python
 - Interface responsive adaptée à toutes les tailles d'écran (PC, Tablette, Mobile)
 - Architecture modulaire : séparation logique de calcul / gestion d'état / interface graphique
-- Notions S5 appliquées : fonctions, modules, `import`, architecture multi-fichiers
-- **Repo dédié** : [github.com/chel42/CalcX](https://github.com/chel42/CalcX)
+- 👉 **Repo dédié** : [github.com/chel42/CalcX](https://github.com/chel42/CalcX)
 
 ---
 
-##  Technologies utilisées
+## Semaine 6 — Structures de données (listes, tuples, dictionnaires, sets)
+
+### Notions couvertes
+- **Listes** : stockage et parcours de collections de données avec index
+- **Tuples** : retourner plusieurs résultats à la fois depuis une fonction (fourchette de prix, etc.)
+- **Dictionnaires** : construire des fiches de synthèse et répartitions en pourcentage
+- **Sets** : obtenir instantanément les valeurs uniques sans doublon (cultures, antennes)
+- Combinaison de toutes les notions S2 → S6 dans un projet complet
+
+### Fichiers produits
+
+#### `Projet_S6_AgriSuds.ipynb` — Digitaliser les Récoltes du Réseau Coopératif AgriSuds
+AgriSuds est un réseau coopératif qui accompagne des petits producteurs agricoles dans plusieurs pays d'Afrique centrale et de l'Ouest, avec 5 antennes locales : Owando (Congo-Brazzaville), Divo (Côte d'Ivoire), Bafoussam (Cameroun), Kaolack (Sénégal), Kpalime (Togo).
+
+Les données de 50 récoltes simulées sont fournies sous forme de 7 listes parallèles (`AGRICULTEURS`, `ANTENNES`, `CULTURES`, `QUANTITES_KG`, `PRIX_KG_FCFA`, `JOURS_ECOULE`). Environ 8% des quantités sont manquantes (`None`) pour simuler les oublis de saisie terrain — toutes les fonctions gèrent ce cas sans planter.
+
+**10 fonctions construites en 3 niveaux :**
+
+| Niveau | Fonction | Rôle |
+|---|---|---|
+| Débutant | `chiffre_affaires_total` | CA total de toutes les récoltes |
+| Débutant | `quantite_totale_culture` | Quantité récoltée pour une culture donnée |
+| Débutant | `nombre_recoltes_antenne` | Nombre de récoltes par antenne |
+| Intermédiaire | `cultures_et_antennes_uniques` | Sets des cultures et antennes sans doublon |
+| Intermédiaire | `fourchette_prix_culture` | Tuple (prix_min, prix_max) par culture |
+| Intermédiaire | `fiche_producteur` | Dictionnaire complet d'un producteur |
+| Avancé | `top_n_producteurs` | Classement des n meilleurs producteurs |
+| Avancé | `recoltes_recentes` | CA des récoltes des X derniers jours |
+| Avancé | `repartition_par_culture_pourcentage` | Part (%) de chaque culture dans la production |
+| Bonus | `producteur_plus_actif_par_antenne` | Meilleur producteur par antenne |
+
+Visualisation automatique générée : quantité par culture, quantité par antenne, camembert de répartition, top 5 producteurs.
+
+---
+
+## Technologies utilisées
 - **Langage** : Python 3.12
 - **Environnements** : VS Code, Jupyter Notebook
 - **Frameworks** : Flet (CalcX)
 - **Versioning** : Git / GitHub
 
-##  Comment exécuter
+## Comment exécuter
 
 ```bash
 # Cloner le repo
@@ -210,14 +246,14 @@ git clone https://github.com/chel42/PROJET_SANTE_AKIENI_ACADEMY.git
 cd "Akieni Academy--Exercice/Semaine 2"
 python sante_variables.py
 
-# Ouvrir le notebook S5
-cd "Semaine 5"
-jupyter notebook Projet_S5_Analyse_Ventes_Afrique.ipynb
+# Ouvrir un notebook
+cd "Semaine 6"
+jupyter notebook Projet_S6_AgriSuds.ipynb
 ```
 
 ---
 
-##  Progression cumulative
+## Progression cumulative
 
 | Semaine | Notions | Statut |
 |---|---|---|
@@ -225,7 +261,9 @@ jupyter notebook Projet_S5_Analyse_Ventes_Afrique.ipynb
 | S3 | if / elif / else, and / or / not, import | ✅ Terminé |
 | S4 | Boucles for, range(), accumulateurs | ✅ Terminé |
 | S5 | Fonctions, def, return, try/except, docstrings | ✅ Terminé |
+| S6 | Listes, tuples, dictionnaires, sets | ✅ Terminé |
+
 
 ---
 
-*Projet pédagogique — Akieni Academy, Brazzaville — 2026*
+*Projet pédagogique — Akieni Academy, Brazzaville, République du Congo — 2026*

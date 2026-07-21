@@ -1,0 +1,17 @@
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Variables d'environnement
+.env
+
+# VS Code
+.vscode/
+
+# Fichiers système Windows
+Thumbs.db
+desktop.ini
